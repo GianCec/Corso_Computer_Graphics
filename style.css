@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Lekton';
+    src: url('font.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Lekton', Arial, sans-serif;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+
+.link {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    color:  antiquewhite;
+      text-decoration: none;
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+.link:hover {
+    background-color: antiquewhite;
+}
+.link.active {
+    background-color: #d83c01;
+  
+
+}
+
+.link.active h2{
+    color: antiquewhite;
+  
+
+}
+
+
+h1 {
+    text-align: left;
+    margin-bottom: 10px; 
+
+    color: #d83c01;
+}
+h2 {
+    text-align: left;
+    color: #d83c01;
+    margin-bottom: 10px; 
+
+
+}
+h3 {
+    margin-top: 0px;
+    color: antiquewhite;
+
+    text-align: left;
+
+}
+
+a{
+    color:antiquewhite;
+    text-decoration: none;
+    transition-delay: 0s, 2s;
+
+}
+
+.item:hover a{
+    color:#d83c01;
+    text-decoration: underline;
+    /* La descrizione rimarrà visibile per 2 secondi dopo il hover */
+
+
+}
+
+.sketch {
+    float: right;
+}
+@media (max-width: 768px) {
+    .links-container {
+        display: flex;
+       
+        width: 75px;
+        overflow-wrap: break-word;
+        word-break: normal;
+        overflow: hidden; 
+        text-align: left;
+    }
+    .sketch {
+        display: none;
+    }
+    .content-container {
+        display: flex;
+        flex:2;
+        width: 90%; /* Occupa il 100% della larghezza disponibile */
+        flex-direction: column;    
+        word-break: normal;
+        overflow: hidden; 
+        text-align: left;
+        margin-right: 20px;
+    }
+    .content-container img{
+        width: 100%;
+        flex:2;
+                height: auto;
+                margin-right: 20px;
+
+    }
+    .main-container {
+        display: flex;
+        width: 100%;
+        max-width: 1200px; /* Limita la larghezza massima */
+        
+    }
+    #immagine1{
+        width: 60vw;
+    }
+  
+}
+li{
+    margin-top: 10px; 
+
+    margin-bottom: 10px; 
+
+    list-style-type: none;
+
+}
+
+/* Contenitore principale per l'immagine, i link e il video */
+.main-container {
+    display: flex;
+    align-items: left;
+    width: 100%;
+    max-width: 1200px; /* Limita la larghezza massima */
+    
+}
+
+#immagine2{
+    width: 150px;
+}
+
+/* Stile per i link (al centro) */
+.links-container {
+    display: flex;
+   
+    width: 150px;
+    overflow-wrap: break-word;
+    word-break: normal;
+    overflow: hidden; 
+    text-align: left;
+}
+
+
+.content-container {
+    display: flex;
+    width: 40vw;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+    overflow: hidden; 
+    text-align: left;
+}
+.photo{
+    width: 15vw ;
+    height: auto;
+}
+.content-container img{
+    width: 25vw ;
+            height: auto;
+}
+.links-container p {
+    line-height: 1.5; /* Migliora la leggibilità con una spaziatura tra le righe */
+    margin-bottom: 1em; /* Aggiunge spazio tra i paragrafi */
+}
+
+p{
+    color: antiquewhite;
+    overflow-wrap: break-word;
+
+ 
+}
+ul {
+    position: absolute;
+    top: 150px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+ul li {
+    margin: 10px 0;
+    color: antiquewhite;
+    overflow-wrap: break-word;
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 18px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Stile per il video (a destra) */
+
+.content-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.content-container .item p {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s, max-height 0.5s ease-in-out;
+}
+
+.content-container .item:hover p,
+.content-container .item:hover p:hover {
+    opacity: 1;
+    visibility: visible;
+    max-height: 1000px; /* Assicurati che sia sufficiente per mostrare tutto il contenuto */
+    transition-delay: 0s;
+}
+
+.content-container .item p {
+    transition-delay: 0s, 2s; /* La descrizione rimarrà visibile per 2 secondi dopo il hover */
+}
+.content-display {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+}

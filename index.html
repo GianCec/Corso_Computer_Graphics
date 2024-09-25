@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indice degli Sketch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+
+
+</head>
+<body>
+    <h1>Laboratorio di Computer Graphics</h1>
+    <h3>A cura di Gianmarco Ceccotti</h3>
+    <div class="main-container">
+        <div class="links-container">
+            
+            <ul>
+                <div class="link" data-file="in_breve.html" onclick="loadContent('in_breve.html', event)"><h2>In breve</h2></div>
+                <div class="link" data-file="galleria.html" onclick="loadContent('galleria.html', event)"><h2>Galleria</h2></div>
+                <div class="link" data-file="risorse.html" onclick="loadContent('risorse.html', event)"><h2>Risorse</h2></div>
+                <div class="link" data-file="contatti.html" onclick="loadContent('contatti.html', event)"><h2>Contatti</h2></div>
+
+            </ul>
+        </div>
+        <div class="content-container" >
+
+            <div id="content-display" >
+             
+            </div>
+          
+         </div>
+       
+          <div class="sketch" id="sketch-holder"></div>
+            </div>
+
+
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
